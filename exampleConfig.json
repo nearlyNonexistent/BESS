@@ -1,0 +1,10 @@
+{
+    "id":"Discord ID here",
+    "token":"Discord Token Here",
+    "client-secret":"client secret here",
+    "prefix":"custom prefix here",
+    "use_username_mentions_instead":"true or false",
+    "perms":"permission ID, get from a generator",
+    "owner": "owner ID number",
+    "server": "EXACT name of the server"
+}
