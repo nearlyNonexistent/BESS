@@ -7,18 +7,26 @@ import asyncio
 import json
 import sys
 import commands
+import os
 import warnings
 
 
 class Config:
-    """This reads the configuration details for the bot. Most of these are accessed using the attrs index, though the prefix is an exception as it is used a lot."""
+    """This reads the configuration details for the bot. Most of these are accessed
+    using the attrs index, with exceptions for often used variables."""
     class Logger():
-        """Private interface for the log file. Essentially just a list that also writes to file."""
+        """Private interface for the log file. Essentially just
+        a list that also writes to file."""
         def __init__(self):
-            self.attributes =[]
+            self.attributes = []
 
         def append(self, message):
-            self.attributes.append(f"[{message.timestamp}] {message.author}: {message.content}\n")
+            logMessage = (f"[{message.timestamp}] "
+                          f"<{message.server} - {message.channel}> "
+                          f"@{message.author}: "
+                          f"{message.content}")
+            print(logMessage)
+            self.attributes.append(logMessage+"\n")
 
         def save(self, savefile="latest.log"):
             with open(savefile, 'w') as f:
@@ -36,25 +44,41 @@ class Config:
         self.owner = self.attrs["owner"]
         self.logger = self.Logger()
         self.voiceclient = None
+        self.debug = self.attrs["debug"]
+        with open("version", 'r') as f:
+            self.version = f.read()
 
+
+print('Loading...')
 config = Config(sys.argv[1] if len(sys.argv) >= 2 else 'config.json')
 client = discord.Client()
 
 
 @client.event
 async def on_ready():
-    print('-----')
-    print('Logged in as')
-    print(client.user.name)
-    print("Invite Link:")
-    print(f"https://discordapp.com/oauth2/authorize?&client_id={client.user.id}&scope=bot&permissions={config.attrs['perms']}")
-    print('------')
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print(("-----\n"
+           "Logged in.\n"
+           f"{client.user.name} - {config.version}.\n"
+           "Invite link:\n"
+           "https://discordapp.com/oauth2/authorize?&client_id="
+           f"{client.user.id}&scope=bot&permissions={config.attrs['perms']}\n"
+           "------"))
+
     if discord.opus.is_loaded():
-        voiceclient = await client.join_voice_channel(discord.utils.get(client.get_all_channels(), type=discord.ChannelType.voice, server__name=config.attrs["server"]))
+        voiceChannel = discord.utils.get(client.get_all_channels(),
+                                         type=discord.ChannelType.voice,
+                                         server__name=config.attrs["server"])
+        voiceclient = await client.join_voice_channel(voiceChannel)
         global commandScan
         commandScan = commands.CommandHolder(client, config, voiceclient)
+        await client.send_message(discord.utils.get(client.get_all_channels(),
+                                  server__name=config.attrs["server"],
+                                  name=config.attrs["channel"]),
+                                  "I LIVE AGAIN.")
     else:
         warnings.warn("BESS failure in Voice!!! Restart!!!")
+    await client.change_presence(game=discord.Game(name=config.attrs["game"]))
 
 
 @client.event
@@ -62,9 +86,20 @@ async def on_message(message):
     if message.content.startswith(config.prefix):
         config.logger.append(message)
         message.content = message.content[len(config.prefix):]
-        await commandScan(message)
+        stop = await commandScan(message)
+        if stop:
+            await client.logout()
     elif message.author == client.user:
         config.logger.append(message)
+
+
+@client.event
+async def on_message_edit(before, after):
+    if before.author != client.user:
+        await client.send_message(before.channel,
+                                  (f"**{before.author}** edited a message:\n"
+                                   f"Original: {before.content}.\n"
+                                   f"After: {after.content}."))
 
 client.run(config.attrs["token"])
 print("Saving log...")
