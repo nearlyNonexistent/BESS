@@ -6,5 +6,8 @@
     "use_username_mentions_instead":"true or false",
     "perms":"permission ID, get from a generator",
     "owner": "owner ID number",
-    "server": "EXACT name of the server"
+    "server": "EXACT name of the server",
+    "channel": "Channel to send boot-up message",
+    "game": "Game for 'is playing' quote",
+    "debug": false
 }

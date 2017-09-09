@@ -1,0 +1,528 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "main.py",
+			"settings":
+			{
+				"buffer_size": 2928,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Run BESS",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Run BESS",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 156.0,
+		"last_filter": "emoji",
+		"selected_items":
+		[
+			[
+				"emoji",
+				"Emoji: Insert Emoji"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"project mana",
+				"Project Manager"
+			],
+			[
+				"python",
+				"Build With: Python"
+			],
+			[
+				"markdown",
+				"Set Syntax: Markdown"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"rename",
+				"File: Rename"
+			],
+			[
+				"autohotk",
+				"Set Syntax: AutoHotkey"
+			],
+			[
+				"renm",
+				"File: Rename"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"python run",
+				"SublimeREPL: Python - RUN current file"
+			],
+			[
+				"remove pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"autohot",
+				"AutoHotkey - Run"
+			],
+			[
+				"synta java",
+				"Set Syntax: Java"
+			],
+			[
+				"doc",
+				"DocBlockr: Decorate line comment"
+			],
+			[
+				"folder",
+				"Project: Add Folder"
+			],
+			[
+				"project ",
+				"Project Manager"
+			]
+		],
+		"width": 510.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Eliza/Documents/code/storage/Python/GK/BESS"
+	],
+	"file_history":
+	[
+		"/C/Users/Eliza/Documents/code/storage/Python/GK/BESS/version",
+		"/C/Users/Eliza/Documents/code/storage/Python/GK/BESS/Commands/__init__.py",
+		"/C/Users/Eliza/Documents/code/storage/Python/GK/BESS/Commands/basic.py",
+		"/C/Users/Eliza/Documents/code/storage/Python/GK/BESS/Commands/example.py",
+		"/C/Users/Eliza/Documents/code/storage/Python/GK/BESS/Commands/roleplay.py",
+		"/C/Users/Eliza/Documents/code/storage/Python/GK/BESS/main.py",
+		"/C/Users/Eliza/Documents/code/storage/Python/GK/BESS/config.json",
+		"/C/Users/Eliza/Documents/code/storage/Python/GK/BESS/readme.txt",
+		"/C/Users/Eliza/Desktop/redo.bat",
+		"/C/Users/Eliza/Documents/code/storage/Python/GK/BESS/latest.log",
+		"/C/Users/Eliza/Documents/code/storage/Python/GK/BESS/exampleConfig.json",
+		"/C/Users/Eliza/Documents/code/storage/Python/GK/BESS/BESS.sublime-project",
+		"/C/Users/Eliza/Documents/code/storage/Python/GK/BESS/BESS.sublime-workspace",
+		"/C/Users/Eliza/Documents/code/storage/Python/BESS/license.txt",
+		"/C/Users/Eliza/Documents/code/storage/Python/BESS/config.json",
+		"/C/Users/Eliza/Documents/code/storage/Python/BESS/main.py",
+		"/C/Users/Eliza/Documents/code/storage/Python/BESS/commands/__init__.py",
+		"/C/Users/Eliza/Documents/code/storage/Python/BESS/commands/basic.py",
+		"/C/Users/Eliza/Documents/code/storage/Python/BESS/commands/roleplay.py",
+		"/C/Users/Eliza/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/C/Users/Eliza/Documents/My Games/XCOM2/XComGame/Config/XComModOptions.ini",
+		"/C/Users/Eliza/.gimp-2.8/menurc",
+		"/C/Users/Eliza/Documents/code/storage/BYOND/bay12-2/Baystation12/html/changelogs/nearlynonexistent-vending-machine.yml",
+		"/C/Users/Eliza/Documents/code/storage/BYOND/GK/Baystation12/html/changelogs/cardemon.yml",
+		"/C/Users/Eliza/Documents/code/storage/Web/pihole/landing.html",
+		"/C/Users/Eliza/.gimp-2.8/gimprc",
+		"/C/Users/Eliza/Documents/code/storage/BYOND/bay12-2/Baystation12/tools/jmerge/clean_map_git.sh",
+		"/C/Users/Eliza/Documents/School/journal",
+		"/C/Users/Eliza/Downloads/FTBB/server.properties",
+		"/C/Program Files (x86)/Steam/steamapps/common/Starbound/storage/starbound_server.config",
+		"/C/Program Files (x86)/Steam/steamapps/common/Starbound/storage/starbound.config",
+		"/C/Users/Eliza/Documents/stuff-neede",
+		"/C/Users/Eliza/Documents/logo.bin",
+		"/C/Users/Eliza/Documents/ls",
+		"/C/Users/Eliza/Documents/more",
+		"/C/Users/Eliza/Documents/code/storage/Python/SpamMan/spam.py",
+		"/A/flash games/index.html",
+		"/C/Users/Eliza/Downloads/flyer/prospectus.abpdf",
+		"/C/Users/Eliza/Downloads/flyer/TTF-Flyer-Front.abpdf",
+		"/C/Users/Eliza/Documents/ttf/2017TTF.sla",
+		"/C/Users/Eliza/Downloads/Pressure2/readme.md",
+		"/C/Users/Eliza/Documents/Text Files/CEPM_draft",
+		"/C/Users/Eliza/Documents/Electronic Arts/The Sims 3/Resource.cfg",
+		"/C/Users/Eliza/Documents/code/storage/Python/BESS/latest.log",
+		"/C/Program Files/Microsoft SQL Server/MSSQL13.MSSQLSERVER/MSSQL/Log/ERRORLOG",
+		"/C/Program Files/Microsoft SQL Server/MSSQL13.SQLEXPRESS/MSSQL/Log/ERRORLOG",
+		"/C/Users/Eliza/Downloads/Grand.Theft.Auto.V-RELOADED/reloaded.nfo",
+		"/C/Users/Eliza/Documents/My Games/Watch_Dogs 2/WD2_GamerProfile.xml",
+		"/C/Users/Eliza/Documents/School/Exam/exam-three",
+		"/C/Users/Eliza/Documents/School/Exam/exam-two",
+		"/C/Users/Eliza/Documents/School/Exam/exam-one",
+		"/C/Users/Eliza/Documents/Text Files/scooby-notes.txt",
+		"/C/Users/Eliza/Notebooks/Principality of Lucindasia/Home.txt",
+		"/C/Program Files (x86)/Steam/steamapps/common/Starbound/storage/starbound.log",
+		"/C/Users/Eliza/Dropbox/Fugit/data/Timeline.wiki",
+		"/C/Users/Eliza/Documents/code/storage/AHK/nier.ahk",
+		"/C/Users/Eliza/Documents/code/storage/AHK/keyfinder.ahk",
+		"/C/Users/Eliza/Downloads/Toon Boom Studio 8.0 (crack Figgler) [ChingLiu]/ChingLiu.Install.Notes.nfo",
+		"/C/Users/Eliza/Downloads/TOONBOOM_ANIMATE_PRO_V2.0_RETAIL-XFORCE/TOONBOOM_ANIMATE_PRO_V2.0_RETAIL-XFORCE/x-force.nfo",
+		"/C/flexlm/license.dat.Backup",
+		"/C/flexlm/license.dat",
+		"/C/Users/Eliza/AppData/Roaming/Sublime Text 3/Packages/DocBlockr/Base File.sublime-settings",
+		"/C/Users/Eliza/AppData/Roaming/Sublime Text 3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/C/Users/Eliza/AppData/Roaming/Sublime Text 3/Packages/User/project_manager.sublime-settings",
+		"/C/Users/Eliza/AppData/Roaming/Sublime Text 3/Packages/ProjectManager/project_manager.sublime-settings",
+		"/C/Users/Eliza/Documents/code/storage/Python/pesterdumb/commandhandler.py",
+		"/C/Users/Eliza/Documents/code/storage/Python/BESS/Commands/__init__.py",
+		"/C/Users/Eliza/AppData/Roaming/Sublime Text 3/Packages/Boxy Theme Addon - Font Face/Boxy Yesterday.sublime-theme"
+	],
+	"find":
+	{
+		"height": 44.0
+	},
+	"find_in_files":
+	{
+		"height": 118.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"__mention__",
+			"message.channel",
+			"self.client.send_message",
+			"flag",
+			"commandScan",
+			"client",
+			"send_message",
+			"SGSL",
+			"bind",
+			"class",
+			"tulsa techfest",
+			"Temperature",
+			"                                        ",
+			"login",
+			"Frame",
+			"MouseSmooth",
+			"Smoothness",
+			"sensitivity",
+			"Volume",
+			"Chapter",
+			"prewriting:",
+			"\u0001",
+			"deed",
+			"xbutton2",
+			"v ",
+			"Raleway Thin",
+			"Raleway-Thin",
+			"Raleway",
+			"Inconsolata",
+			"San Francisco Text",
+			"Sans-Serif"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"message",
+			"self.__respondPing__",
+			"matchFound",
+			"ISL",
+			"class_name",
+			"Chapter",
+			"Section",
+			"Volume",
+			"",
+			"v ",
+			"XButton2",
+			"Raleway",
+			"Raleway Thin",
+			"Raleway-Thin",
+			"Raleway",
+			"Inconsolata",
+			"San Francisco Text"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.py",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2928,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								833,
+								873
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Boxy Monokai.tmTheme",
+							"git_gutter_is_enabled": true,
+							"git_savvy.repo_path": "C:\\Users\\Eliza\\Documents\\code\\storage\\Python\\GK\\BESS",
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 101.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "BESS.sublime-project",
+	"replace":
+	{
+		"height": 82.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 341.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 374.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

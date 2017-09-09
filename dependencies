@@ -1,0 +1,4 @@
+Dependencies: (feed into pip install)
+python-levenshtein
+discord[voice]
+asyncio
