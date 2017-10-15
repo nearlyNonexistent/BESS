@@ -1,5 +1,6 @@
 import asyncio
 
+
 class Command(object):
     """The command object implements a series of commands as functions,
     and reports them back to the CommandHolder."""
@@ -25,10 +26,17 @@ class Command(object):
         else:
             return [""]
 
-    async def __respondPing__(self, message, text):
+    async def __respond__(self, message, text="", ping=False, embed=False):
         """Respond to a user with a ping wrapped around the message."""
-        return await self.client.send_message(message.channel,
-                                              f"{self.__mention__(message.author.id)}: {text}")
+        if ping:
+            text2 = f"\u200B{self.__mention__(message.author.id)}: {text}"
+        else:
+            text2 = F"\u200B{text}"
+        if embed:
+            return await self.client.send_message(message.channel, text2,
+                                                  embed=embed)
+        else:
+            return await self.client.send_message(message.channel, text2)
 
 # hack hack HACK!
 # all commands need to be added below here, until

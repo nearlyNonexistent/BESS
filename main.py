@@ -9,6 +9,8 @@ import sys
 import commands
 import os
 import warnings
+import time
+import Levenshtein as levenshtein
 
 
 class Config:
@@ -45,6 +47,7 @@ class Config:
         self.logger = self.Logger()
         self.voiceclient = None
         self.debug = self.attrs["debug"]
+        self.startTime = time.time()
         with open("version", 'r') as f:
             self.version = f.read()
 
@@ -57,13 +60,13 @@ client = discord.Client()
 @client.event
 async def on_ready():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print(("-----\n"
+    print(("------------\n"
            "Logged in.\n"
-           f"{client.user.name} - {config.version}.\n"
-           "Invite link:\n"
-           "https://discordapp.com/oauth2/authorize?&client_id="
+           f" {client.user.name} - {config.version}.\n"
+           " Invite link:\n"
+           " https://discordapp.com/oauth2/authorize?&client_id="
            f"{client.user.id}&scope=bot&permissions={config.attrs['perms']}\n"
-           "------"))
+           "------------"))
 
     if discord.opus.is_loaded():
         voiceChannel = discord.utils.get(client.get_all_channels(),
@@ -72,10 +75,7 @@ async def on_ready():
         voiceclient = await client.join_voice_channel(voiceChannel)
         global commandScan
         commandScan = commands.CommandHolder(client, config, voiceclient)
-        await client.send_message(discord.utils.get(client.get_all_channels(),
-                                  server__name=config.attrs["server"],
-                                  name=config.attrs["channel"]),
-                                  "I LIVE AGAIN.")
+        print("System online.")
     else:
         warnings.warn("BESS failure in Voice!!! Restart!!!")
     await client.change_presence(game=discord.Game(name=config.attrs["game"]))
@@ -83,23 +83,28 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.content.startswith(config.prefix):
-        config.logger.append(message)
-        message.content = message.content[len(config.prefix):]
-        stop = await commandScan(message)
-        if stop:
-            await client.logout()
-    elif message.author == client.user:
-        config.logger.append(message)
+    if not message.author.bot:
+        if message.content.startswith(config.prefix):
+            config.logger.append(message)
+            message.content = message.content[len(config.prefix):]
+            stop = await commandScan(message)
+            if stop:
+                await client.logout()
+        elif message.author == client.user:
+            config.logger.append(message)
 
 
 @client.event
 async def on_message_edit(before, after):
-    if before.author != client.user:
-        await client.send_message(before.channel,
-                                  (f"**{before.author}** edited a message:\n"
-                                   f"Original: {before.content}.\n"
-                                   f"After: {after.content}."))
+    if not before.author.bot:
+        if before.author != client.user:
+            dist = levenshtein.distance(before.content, after.content)
+            if dist > config.attrs["minimum-levenshtein"]:
+                await client.send_message(before.channel,
+                                          (f"\u200B*{before.author}*"
+                                           " edited a message:\n"
+                                           f"Original: ```{before.content}```"
+                                           f"After: ```{after.content}```"))
 
 client.run(config.attrs["token"])
 print("Saving log...")

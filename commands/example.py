@@ -21,5 +21,5 @@ class TemplateCommands(Command):
     async def sleep(self, trueself, message):
         """Sleep waits for 5 seconds then responds. Only for diagnostics."""
         await asyncio.sleep(5)
-        await self.client.send_message(message.channel,
-                                       'Done sleeping')
+        await self.client.__respond__(message.channel,
+                                      'Done sleeping', True)

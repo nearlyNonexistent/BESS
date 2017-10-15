@@ -15,9 +15,9 @@ class RoleplayCommands(Command):
 
         dieCount = dieParse(self.__parse__("roll", message))
         if dieCount:
-            await self.client.send_message(message.channel, "result goes here")
+            await self.__respond__(message, "result goes here")
         else:
-            await self.client.send_message(message.channel, "NYI")
+            await self.__respond__(message, "NYI")
 
     async def seventhsanctum(self, trueself, message):
         """Returns the first result of a seventhsanctum number generator."""
@@ -25,7 +25,7 @@ class RoleplayCommands(Command):
 
     async def flip(self, trueself, message):
         """Flips a heart shaped coin."""
-        coin = await self.__respondPing__(message,
+        coin = await self.__respond__(message,
                                           ("Okay, let's flip a coin... "
                                            "green is heads, red is tails."))
         await asyncio.sleep(1)
@@ -36,7 +36,7 @@ class RoleplayCommands(Command):
             flipResult = "💛"  # yellow
             await self.client.edit_message(coin,
                                            coin.contents +
-                                           ("... it landed on its side! "
+                                           (".. it landed on its side! "
                                             "That's a 1/6000 chance!"))
         elif result <= 3060:   # 51% of 6000
             flipResult = "💚"  # green
