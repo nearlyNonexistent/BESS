@@ -3,13 +3,12 @@
     "token":"Discord Token Here",
     "client-secret":"client secret here",
     "prefix":"custom prefix here",
-    "use_username_mentions_instead":"true or false",
+    "description": "description here",
     "perms":"permission ID, get from a generator",
-    "owner": "owner ID number",
-    "server": "EXACT name of the server",
-    "channel": "Channel to send boot-up message",
     "game": "Game for 'is playing' quote",
     "PASTURE": false,
     "debug": false,
-    "minimum-levenshtein": "set to a number, preferably 1-2"
+    "initial_extensions": [
+        "cogs.mod"
+    ]
 }

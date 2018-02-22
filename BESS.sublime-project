@@ -8,5 +8,9 @@
 			],
 			"path": "."
 		}
-	]
+	],
+	"SublimeLinter":
+    {
+        "@python": 3.6
+    }
 }
