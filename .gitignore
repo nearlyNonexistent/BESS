@@ -106,6 +106,9 @@ config.json
 # data (often personal)
 data/
 
+# private cogs for personal usage
+privatecogs/
+
 # Cache files for Sublime Text
 *.tmlanguage.cache
 *.tmPreferences.cache
