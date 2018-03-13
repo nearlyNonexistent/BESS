@@ -1,6 +1,6 @@
 {
-	"version": "Sorghum Prerelease",
-	"date": "2018-02-22",
-	"downloadUrl": "https://github.com/nearlyNonexistent/BESS/releases/tag/vsorghum",
+	"version": "Sorghum Prerelease 1.5",
+	"date": "2018-03-13",
+	"downloadUrl": "https://github.com/nearlyNonexistent/BESS/releases/tag/v1.5",
 	"checkUrl": "https://raw.githubusercontent.com/nearlyNonexistent/BESS/master/version.json"
 }

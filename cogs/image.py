@@ -1,4 +1,4 @@
-"""Cog for BESS. Manipulates images"""
+"""Cog for BESS. Manipulates images."""
 # Standard Library Imports.
 import asyncio
 from io import BytesIO
@@ -45,7 +45,7 @@ class ImageManip(object):
     @commands.command(name="meme")
     async def makememe(self, ctx, memename="",
                        toptext="", middletext="", bottomtext=""):
-        """Create a meme!"""
+        """Create a meme."""
         toptext = toptext.upper()
         middletext = middletext.upper()
         bottomtext = bottomtext.upper()
@@ -94,7 +94,8 @@ class ImageManip(object):
     async def image(self, ctx):
         """Image listing and modification."""
         def check(m):
-            return m.author.id == ctx.author.id and m.content in self.image_array
+            return m.author.id == ctx.author.id and \
+                   m.content in self.image_array
         if ctx.invoked_subcommand is None:
             filen = False
             try:

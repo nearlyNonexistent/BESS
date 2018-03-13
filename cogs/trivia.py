@@ -8,7 +8,6 @@ import random
 import attr
 from discord.ext import commands
 
-
 @attr.s
 class Trivia(object):
     """Trivia Game 9000!"""

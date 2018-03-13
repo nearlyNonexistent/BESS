@@ -116,7 +116,7 @@ class Bess(commands.Bot):
     @commands.command()
     @commands.is_owner()
     async def exit(self, ctx):
-        """Close the bot. (Owner only.)"""
+        """Stop the bot from running entirely."""
         await ctx.message.add_reaction("💤")
         await self.logout()
 
@@ -124,7 +124,6 @@ class Bess(commands.Bot):
         """Alert the user on BESS login."""
         app_info = await self.application_info()
         self.owner = app_info.owner
-        await self.change_presence(game=discord.Game(name=self.config["game"]))
         self.logger.abbr_log("BESS started.",
                              ("BESS has connected successfully with"
                               f" extensions: {self.current_extensions}."))

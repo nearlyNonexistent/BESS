@@ -1,6 +1,5 @@
 """Cog for BESS. This cog provides a simple trivia game."""
 # Standard Library Imports
-import asyncio
 import json
 import os
 # Third-Party Imports.
@@ -16,7 +15,7 @@ class Notes(object):
 
     @commands.group(aliases=["notes"], invoke_without_command=True)
     async def note(self, ctx, id: int = -1):
-        """Note-keeping commands"""
+        """Note-keeping commands."""
         id -= 1
         notes = self.__load_notes(ctx.author.id)
         if id < 0:
